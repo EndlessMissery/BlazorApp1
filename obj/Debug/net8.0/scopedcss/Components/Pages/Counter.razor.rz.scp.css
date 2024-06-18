@@ -1,0 +1,47 @@
+.counter-box[b-iomgrdh8s8] {
+    background-color: rgb(10, 83, 190);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 20%;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+}
+
+.btn-primary[b-iomgrdh8s8] {
+    position: relative;
+    width: 6rem;
+    height: 2rem;
+    border-radius: .5rem;
+    margin: .5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.25);
+    border: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.btn-primary:hover[b-iomgrdh8s8] {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+}
+
+.count-stats[b-iomgrdh8s8] {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+h2[b-iomgrdh8s8] {
+    padding-top: 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}

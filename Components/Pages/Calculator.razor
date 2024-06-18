@@ -1,0 +1,57 @@
+@page "/Calculator"
+
+<PageTitle>Calculator</PageTitle>
+
+<div class="calculator-body">
+    <div class="calculator">
+        <h3 class="header-name-calc">Calculator</h3>
+        <input type="number" @bind-Value="FirstNumber" @bind-Value:event="oninput" placeholder="First num" />
+        <input type="number" @bind-Value="SecondNumber" @bind-Value:event="oninput" placeholder="Second num" />
+
+        <div>
+            <button class="button-calc" @onclick="Add">+</button>
+            <button class="button-calc" @onclick="Subtract">-</button>
+            <button class="button-calc" @onclick="Multiply">*</button>
+            <button class="button-calc" @onclick="Divide">/</button>
+        </div>
+
+        <p class="result">Result: @Result</p>
+    </div>
+</div>
+
+@code {
+    private double FirstNumber { get; set; }
+    private double SecondNumber { get; set; }
+    private double Result { get; set; }
+
+    private void Add()
+    {
+        Result = FirstNumber + SecondNumber;
+        StateHasChanged();
+    }
+
+    private void Subtract()
+    {
+        Result = FirstNumber - SecondNumber;
+        StateHasChanged();
+    }
+
+    private void Multiply()
+    {
+        Result = FirstNumber * SecondNumber;
+        StateHasChanged();
+    }
+
+    private void Divide()
+    {
+        if (SecondNumber != 0)
+        {
+            Result = FirstNumber / SecondNumber;
+        }
+        else
+        {
+            Result = double.NaN;
+        }
+        StateHasChanged();
+    }
+}

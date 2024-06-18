@@ -1,0 +1,96 @@
+﻿@rendermode InteractiveServer
+
+<div class="counter-box">
+    <h2>Counter</h2>
+
+    <p class="count-stats" role="status">Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Increase</button>
+    <button class="btn btn-primary" @onclick="DecrementCount">Decrease</button>
+</div>
+
+<br/>
+
+<div class="counter-box">
+    <div class="row">
+        <p>First number</p>
+    </div>
+
+    <div class="col-sm-4">
+        <input class="num-input" placeholder="Enter First Number" @bind="num1"/>
+    </div>
+
+    <br/>
+
+    <div class="row">
+        <p>Second number</p>
+    </div>
+
+    <div class="col-sm-4">
+        <input class="num-input" placeholder="Enter Second Number" @bind="num2"/>
+    </div>
+
+    <br/>
+
+    <div class="row">
+        <p>Result</p>
+    </div>
+
+    <div class="col-sm-4">
+        <input readonly @bind="finalresult"/>
+    </div>
+
+    <br/>
+    <button @onclick="AddNumbers" class="btn btn-primary">+</button>
+    <button @onclick="SubtractNumbers" class="btn btn-primary">-</button>
+    <button @onclick="MultiplyNumbers" class="btn btn-primary">*</button>
+    <button @onclick="DivideNumbers" class="btn btn-primary">/</button>
+</div>
+
+
+
+
+
+@code {
+private int currentCount = 0;
+
+private void IncrementCount()
+{
+currentCount++;
+}
+
+private void DecrementCount()
+{
+currentCount--;
+}
+
+private double num1, num2;
+private string finalresult;
+
+private void AddNumbers()
+{
+finalresult = (num1 + num2).ToString();
+}
+
+private void SubtractNumbers()
+{
+finalresult = (num1 - num2).ToString();
+}
+
+private void MultiplyNumbers()
+{
+finalresult = (num1 * num2).ToString();
+}
+
+private void DivideNumbers()
+{
+if (num2 != 0)
+{
+finalresult = (num1 / num2).ToString();
+}
+else
+{
+finalresult = "Cannot divide by zero";
+}
+}
+}

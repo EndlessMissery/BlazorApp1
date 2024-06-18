@@ -1,0 +1,30 @@
+﻿
+
+@rendermode InteractiveServer
+
+
+
+<div class="counter-box">
+    <h2>Counter</h2>
+    
+    <p class="count-stats" role="status">Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Increase</button>
+    <button class="btn btn-primary" @onclick="DecrementCount">Decrease</button>
+</div>
+
+ 
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void DecrementCount()
+    {
+        currentCount--;
+    }
+
+}
