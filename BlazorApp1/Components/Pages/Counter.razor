@@ -7,33 +7,32 @@
 
     <button class="btn btn-primary" @onclick="IncrementCount">Increase</button>
     <button class="btn btn-primary" @onclick="DecrementCount">Decrease</button>
-</div>
+
 
 <br/>
-
-<div class="counter-box">
+    <h2>Calculator</h2>
     <div class="row">
-        <p>First number</p>
+        <p class="count-stats">First number</p>
     </div>
 
     <div class="col-sm-4">
-        <input class="num-input" placeholder="Enter First Number" @bind="num1"/>
+        <input placeholder="Enter First Number" @bind="num1"/>
     </div>
 
     <br/>
 
     <div class="row">
-        <p>Second number</p>
+        <p class="count-stats">Second number</p>
     </div>
 
     <div class="col-sm-4">
-        <input class="num-input" placeholder="Enter Second Number" @bind="num2"/>
+        <input placeholder="Enter Second Number" @bind="num2"/>
     </div>
 
     <br/>
 
     <div class="row">
-        <p>Result</p>
+        <p class="count-stats">Result</p>
     </div>
 
     <div class="col-sm-4">

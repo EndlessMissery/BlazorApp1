@@ -201,7 +201,7 @@ main[b-nz1yiwl0um] {
 }
 /* _content/BlazorApp1/Components/Pages/Counter.razor.rz.scp.css */
 .counter-box[b-iomgrdh8s8] {
-    background-color: rgb(10, 83, 190);
+    background: linear-gradient(to bottom, rgba(10, 83, 190, 1) 10%, rgba(10, 83, 190, 0) 90%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -211,14 +211,14 @@ main[b-nz1yiwl0um] {
     border-radius: 15px;
     padding: 1rem 1rem;
 }
-
-.num-input[b-iomgrdh8s8] {
+.col-sm-4 [input][b-iomgrdh8s8]{
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
     font-size: 1.1em;
+    color: white;
+    background-color: transparent;
 }
-
 
 .btn-primary[b-iomgrdh8s8] {
     position: relative;
@@ -254,4 +254,11 @@ h2[b-iomgrdh8s8] {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+}
+
+p[b-iomgrdh8s8] {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
 }
